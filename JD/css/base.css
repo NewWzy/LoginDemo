@@ -20,6 +20,24 @@
 .fr{
 	float: right;
 }
+.tp{
+	color: #f10215 !important;
+}
+a{
+	text-decoration: none;
+}
+ul,h1,input{
+	margin: 0;
+	padding: 0;
+}
+input,button{
+	border: 0;
+	outline: none;
+}
+ul{
+	list-style: none;
+}
+/*京东头部开始*/
 .J-event{
 	height: 80px;
 	background-color: #000;
@@ -45,4 +63,149 @@
 	font-family: icomoon;
 	font-style: normal;
 	color: #eee;
+}
+/*京东头部结束*/
+/*快速导航栏开始*/
+.pos{
+	font-family: icomoon;
+	color:#f10215;
+	font-size: 14px;
+	font-style: normal;
+}
+.city{
+	margin-left: 200px;
+}
+.shortcut{
+	height: 30px;
+	line-height: 30px;
+	background-color: #e3e4e5;
+	border-bottom: 1px solid #dededf;
+	font-size: 12px;
+	color: #999;
+}
+.dropdown{
+	padding-right: 15px;
+	position: relative;
+}
+.dropdown i{
+	font-family: icomoon;
+	color:#ccc;
+	font-size: 14px;
+	font-style: normal;
+	position: absolute;
+	top: -2px;
+	right: -2px;
+}
+.shortcut a{
+	text-decoration: none;
+	font-size: 12px;
+	color: #999;
+}
+.shortcut a:hover{
+	color: #e33333;
+}
+.shortcut li{
+	float: left;
+}
+.space{
+	width: 1px;
+	height: 10px;
+	background-color: #ccc;
+	margin: 10px 10px 0;
+}
+.mobile{
+	position: relative;
+}
+.mobile img{
+	position: absolute;
+	left:-3px;
+	top: 24px;
+	border: 1px solid #ccc;
+	padding: 3px;
+}
+/*快速导航栏结束*/
+/*logo 开始*/
+.middle{
+	height: 140px;
+	/*background-color: pink;*/
+	position: relative;
+}
+.logo{
+	position: absolute;
+	top: -30px;
+	left: 0;
+	box-shadow: 0 -12px 10px rgba(0,0,0,.2);
+}
+.logo a{
+	width: 190px;
+	height: 170px;
+	display: block;
+	/*display: block;*/
+	background: url(../images/logo.png) no-repeat;
+	background-color: #fff;
+}
+/*logo结束*/
+/*搜索栏开始*/
+.search{
+	width: 550px;
+	height: 34px;
+	position: absolute;
+	top: 25px;
+	left: 320px;
+	/*background-color: #000;*/
+}
+.search input{
+	width: 495px;
+	height: 32px;
+	/*outline: none;*/
+	font-size: 14px;
+	border: 1px solid #f10215;
+	padding-left: 3px;
+	float: left;
+}
+.search button{
+	width: 50px;
+	height: 34px;
+	background-color: #f10215;
+	float: left;
+}
+.search i{
+	font-family: icomoon;
+	font-style: normal;
+	color: #fff;
+}
+/*购物车开始*/
+.shopCar{
+	width: 190px;
+	height: 32px;
+	position: absolute;
+	top: 25px;
+	right: 100px;
+	/*background-color: skyblue;*/
+	line-height: 32px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+.shopCar i{
+	font-family: icomoon;
+	font-style: normal;
+	font-size: 12px;
+	color: #f10215;
+}
+.shopCar a{
+	font-size: 12px;
+	color: #f10215;
+}
+.shopCar span{
+	width: 15px;
+	height: 15px;
+	background-color: #f10215;
+	border-radius: 50px;
+	position: absolute;
+	top: 5px;
+	right: 40px;
+	font-size: 12px;
+	line-height: 15px;
+	color: #fff;
+
 }
