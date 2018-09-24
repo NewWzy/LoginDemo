@@ -10,6 +10,9 @@
   font-style: normal;
 }
 /*版心*/
+body{
+	color: #f0f3ef;
+}
 .w{
 	width: 1190px;
 	margin:auto;
@@ -25,8 +28,10 @@
 }
 a{
 	text-decoration: none;
+	font-size: 12px;
+	color: #999;
 }
-ul,h1,input{
+ul,h1,h5,input,p,dd,dt,dl{
 	margin: 0;
 	padding: 0;
 }
@@ -96,11 +101,11 @@ ul{
 	top: -2px;
 	right: -2px;
 }
-.shortcut a{
+/*.shortcut a{
 	text-decoration: none;
 	font-size: 12px;
 	color: #999;
-}
+}*/
 .shortcut a:hover{
 	color: #e33333;
 }
@@ -193,7 +198,7 @@ ul{
 	color: #f10215;
 }
 .shopCar a{
-	font-size: 12px;
+	/*font-size: 12px;*/
 	color: #f10215;
 }
 .shopCar span{
@@ -209,3 +214,185 @@ ul{
 	color: #fff;
 
 }
+.hotwords{
+	width: 550px;
+	height: 20px;
+	position: absolute;
+	top: 65px;
+	left: 320px;
+	/*background-color: pink;*/
+	line-height: 20px;
+}
+.hotwords a{
+	float: left;
+	margin-right: 9px;
+}
+.hotwords a:hover{
+	color: #c81623;
+}
+/*小导航栏*/
+.navitems{
+	width: 790px;
+	height: 40px;
+	position: absolute;
+	left: 200px;
+	bottom: 0;
+	line-height: 40px;
+}
+.navitems li{
+	float: left;
+	margin-left: 30px;
+}
+.navitems li a{
+	font-size: 14px;
+	font-weight: 700;
+	color: #333;
+}
+.navitems .space{
+	margin: 16px -11px 0 20px;
+}
+.super{
+	width: 190px;
+	height: 40px;
+	position: absolute;
+	bottom: 10px;
+	right: 0;
+}
+.super{
+	background: url(../images/super.png);
+}
+/*底部开始*/
+.footer{
+	height: 500px;
+	background-color: #EAEAEA;
+	margin-top: 40px;
+}
+.service{
+	/*height: 102px;*/
+	/*background-color: purple;*/
+	border-bottom: 1px solid #dedede;
+	padding: 30px 0;
+}	
+.service ul{
+	overflow: hidden;
+}
+.service li{
+	width: 297px;
+	height: 42px;
+	/*background-color: purple;*/
+	line-height: 42px;
+	position: relative;
+	float: left;
+}
+.service li h5,.service li p{
+	color: #000;
+	font-size: 16px;
+	font-weight: 700;
+}
+.service li h5{
+	width: 36px;
+	height: 42px;
+	position: absolute;
+	top: 0;
+	left: 37px;
+	background: url(../images/ico.png) no-repeat;
+	text-indent: -999px;
+}
+.service li p{
+	margin-left: 84px;
+}
+.service li:nth-child(2) h5{
+	background-position: 0 -43px;
+}
+.service li:nth-child(3) h5{
+	background-position: 0 -86px;
+}
+.service li:nth-child(4) h5{
+	background-position: bottom;
+}
+/*帮助模块*/
+.help{
+	height: 175px;
+	/*background-color: pink;*/
+	padding-top: 25px;
+	border-bottom: 1px solid #dedede;
+}
+.help dl{
+	width: 198px;
+	float: left;
+}
+.help dt{
+	height: 28px;
+	color: #666;
+	font-size: 14px;
+	font-weight: 700;
+}
+.help dd a{
+	height: 22px;
+	color: #666;
+}
+.coverage{
+	width: 200px;
+	height: 150px;
+	background: url(../images/ico_footer.png) no-repeat;
+}
+.coverage h5{
+	width: 164px;
+	color: #666;
+	padding-left: 36px;
+}
+.coverage p{
+	font-size: 12px;
+	color: #666;
+	line-height: 18px;
+}
+.coverage a{
+	float: right;
+}
+/*版权部分*/
+.copyright{
+	padding-top: 16px;
+	text-align: center;
+	font-size: 12px;
+}
+.copyright a{
+	color: #666;
+}
+.copyright span{
+	margin: 0 8px;
+	color: #999;
+}
+.copyright p{
+	color: #999;
+	line-height: 24px;
+}
+/*图标部分*/
+.foot-icon{
+	margin-top: 15px;
+}
+.foot-icon a{
+	display: inline-block;
+	width: 103px;
+	height: 32px;
+	/*background-color: pink;*/
+	background: url(../images/ico_footer.png) no-repeat 0 -152px;
+}
+.foot-icon a:nth-child(2){
+	background-position: 0 -184px;
+}
+.foot-icon a:nth-child(3){
+	background-position: 0 -216px;
+}
+.foot-icon a:nth-child(4){
+	background-position: -103px -152px;
+}
+.foot-icon a:nth-child(5){
+	background-position: -103px -184px;
+}
+.foot-icon a:nth-child(6){
+	background-position: -103px -216px;
+}
+
+
+
+
