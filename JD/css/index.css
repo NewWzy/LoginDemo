@@ -1,4 +1,5 @@
 /*中间分类*/
+/*分类左侧部分*/
 .grid{
 	height: 480px;
 }
@@ -8,6 +9,7 @@
 	background-color: #6e6568;
 	color: #fff;
 	font-size: 12px;
+	position: relative;
 }
 .grid-col1 ul{
 	margin: 25px 0;
@@ -25,14 +27,241 @@
 .grid-col1 li:hover{
 	background-color: #c3bfc0;
 }
+.grid-col1 img{
+	width: 250px;
+	height: 480px;
+	position: absolute;
+	top: 0;
+	left: -250px;
+	z-index: 999;
+}
+/*分类中间部分*/
 .grid-col2{
 	width: 790px;
 	height: 100%;
 	background-color: purple;
 	margin-left: 10px;
 }
+.grid-col2-t{
+	position: relative;
+}
+.grid-col2-t img{
+	vertical-align: top;
+	margin-bottom: 10px;
+}
+.arrow-l{
+	text-align: center;
+	width: 30px;
+	height: 48px;
+	background-color: rgba(0,0,0,.4);
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -24px;
+}
+.arrow-r{
+	text-align: center;
+	width: 30px;
+	height: 48px;
+	background-color: rgba(0,0,0,.4);
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -24px;
+}
+.grid-col2-t i{
+	font-family: icomoon;
+	font-style: normal;;
+	font-size: 14px;
+	line-height: 48px;
+}
+.circle{
+	width: 180px;
+	height: 20px;
+	background-color: rgba(0,0,0,.2);
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -90px;
+	border-radius: 10px;
+	/*line-height: 20px;*/
+}
+.circle li{
+	width: 12px;
+	height: 12px;
+	background-color: #fff;
+	border-radius: 50%;
+	float: left;
+	margin: 4px 5px ;
+}
+.circle li:hover{
+	background-color: #f10215;
+}
+.ad-l,.ad-r{
+	width: 390px;
+	height: 130px;
+}
+/*分类右侧*/
 .grid-col3{
 	width: 190px;
 	height: 100%;
 	background-color: skyblue;
+}
+/*登录模块*/
+.login{
+	height: 85px;
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	padding: 15px;
+	
+}
+.login-t{
+	width: 95px;
+	height: 60px;
+	font-size: 12px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 20px;
+	padding-left: 60px;
+	position: relative;
+}
+.user-info{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: url(../images/sprite_userinfo@1x.png) no-repeat;
+}
+.user-info img{
+	width: 40px;
+	border-radius: 50%;
+	margin: 5px;
+}
+.login-b a{
+	width: 50px;
+	height: 10px;
+	border: 2px solid #f10215;
+	/*margin: 0 5px;*/
+	padding: 5px 10px;
+	color: #f10215;
+}
+.login-b .l{
+	margin-right: 5px;
+}
+.login-b a:hover{
+	color: #fff;
+	background-color: #f10215;
+}
+/*新闻模块*/
+.news{
+	height: 154px;
+	background-color: #fff;
+	padding: 10px 15px 0;
+	box-sizing: border-box;
+	border-bottom: 1px solid #ccc;
+}
+.news-t{
+	height: 18px;
+	border-bottom: 1px solid #ccc;
+	position: relative;
+}
+.news-t a{
+	font-size: 12px;
+	color: #666;
+	float: left;
+	width: 38px;
+	height: 17px;
+	line-height: 17px;
+}
+.news-t .sales{
+	border-right: 1px solid #ccc;
+}
+.news-t .notice{
+	margin-left: 15px;
+}
+.news-t .more{
+	float: right;
+}
+.news-t div{
+	width: 38px;
+	height: 2px;
+	background-color: #f10215;
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+}
+.news-b ul{
+	margin-top: 12px;
+}
+.news-b li{
+	line-height: 20px;
+}
+.news-b li a:hover{
+	color: #f10215;
+}
+/*扩展模块*/
+.expan{
+	height: 210px;
+	background-color: #fff;
+	overflow: hidden;
+}
+.expan ul{
+	width: 192px;
+}
+.expan li{
+	width: 46px;
+	height: 70px;
+	border: 1px solid #ccc;
+	float: left;
+}
+.expan a{
+	 display: block;
+	 padding-top: 15px;
+	 text-align: center;
+}
+.expan li i{
+	width: 18px;
+	height: 22px;
+	display: block;
+	background:url(../images/sprite_fs@1x.png) no-repeat;
+    margin: 0 auto;
+    margin-bottom: 9px;
+}
+.expan li:first-child i{
+	background-position: -5px -88px;
+}
+.expan li:nth-child(2) i{
+	background-position: -2px -46px;
+}
+.expan li:nth-child(3) i{
+	background-position: -47px -90px;
+}
+.expan li:nth-child(4) i{
+	background-position: -88px -5px;
+}
+.expan li:nth-child(5) i{
+	background-position: -88px -46px;
+}
+.expan li:nth-child(6) i{
+	background-position: -2px -3px;
+}
+.expan li:nth-child(7) i{
+	background-position: -44px -46px;
+}
+.expan li:nth-child(8) i{
+	background-position: -92px -88px;
+}
+.expan li:nth-child(9) i{
+	background-position: -134px -1px;
+}
+.expan li:nth-child(10) i{
+	background-position: -135px -44px;
+}
+.expan li:nth-child(11) i{
+	background-position: -132px -93px;
+}
+.expan li:last-child i{
+	background-position: -46px -2px;
 }
