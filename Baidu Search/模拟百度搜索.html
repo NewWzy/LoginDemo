@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			width: 450px;
+			margin: 200px auto;
+		}
+		#txt{
+			width: 300px;
+		}
+		#pop{
+			width: 350px;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<input type="text" id="txt" value="">
+		<input type="button" value="搜索" id="btn">
+	</div>
+	<script src="common.js"></script>
+	<script>
+		var keyWords = ["小杨才是最纯洁的", "小杨才是最帅的", "小芳是最可爱的", "小米是最勤劳的", "京东是电子商务", "我就是我", "我和同学去玩"];
+		//获取文本框注册键盘抬起事件
+		my$("txt").onkeyup = function() {
+
+
+
+			//=======================================
+			//每一次键盘抬起都判断页面中有没有这个div
+			if(my$("dv")){
+				//删除一次
+				my$("box").removeChild(my$("dv"));
+			}
+			//获取文本框输入内容
+			var text = this.value;
+			var tempArr = []; //临时数组--空数组
+			//把文本框中输入的内容和数组中的每个数据对比
+			for (var i = 0; i < keyWords.length; i++) {
+				//是否是最开始出现的
+				if (keyWords[i].indexOf(text) == 0) {
+					tempArr.push(keyWords[i]); //追加到临时数组中
+				}
+			}
+			//====================================================
+			//如果文本框是空的，临时数组是空的,不用创建div
+			if (tempArr.length == 0 || this.value.length == 0) {
+				if (my$("dv")) {
+					my$("box").removeChild(my$("dv"));
+				}
+				return;
+			}
+			// console.log(tempArr);
+			//创建div,把div加入到id为boxd的div中
+			var dvObj = document.createElement("div");
+			my$("box").appendChild(dvObj);
+			dvObj.id = "dv";
+			dvObj.style.width = "300px";
+			// dvObj.style.height = "100px";
+			dvObj.style.border = "1px solid green";
+
+			//循环遍历临时数组，创建对应的p标签
+			for (var i = 0; i < tempArr.length; i++) {
+				var pObj = document.createElement("p");
+				dvObj.appendChild(pObj);
+				setInnerText(pObj, tempArr[i]);
+				pObj.style.margin = 0;
+				pObj.style.padding = 0;
+				pObj.style.cursor = "pointer";
+				pObj.style.marginTop = "5px";
+				pObj.style.marginLeft = "5px";
+				//鼠标进入
+				pObj.onmouseover=function (){
+					this.style.backgroundColor = "red";
+				}
+				//鼠标离开
+				pObj.onmouseout=function (){
+					this.style.backgroundColor = "";
+				}
+			}
+		};
+	</script>
+</body>
+</html>
