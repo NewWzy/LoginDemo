@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div class="wrap" id="wrap">
+		<div class="slider" id="slider">
+			<ul>
+				<li><img src=images/1.jpg alt=""></li>
+				<li><img src=images/2.jpg alt=""></li>
+				<li><img src=images/3.jpg alt=""></li>
+				<li><img src=images/4.jpg alt=""></li>
+				<li><img src=images/5.jpg alt=""></li>
+			</ul>
+			<div class="arrow" id="arrow">
+				<div class="prev" id="prev"></div>
+				<div class="next" id="next"></div>
+			</div>
+		</div>
+	</div>
+	<script src="common.js"></script>
+	<script>
+		var json=[
+            {   //0
+            	"width":400,
+            	"top":70,
+            	"left":50,
+            	"opacity":0.2,
+            	"zIndex":2
+            },
+            {   //1
+            	"width":600,
+            	"top":120,
+            	"left":0,
+            	"opacity":0.8,
+            	"zIndex":3
+            },
+            {   //2
+            	"width":800,
+            	"top":100,
+            	"left":200,
+            	"opacity":1,
+            	"zIndex":4
+            },
+            {   //3
+            	"width":600,
+            	"top":120,
+            	"left":600,
+            	"opacity":0.8,
+            	"zIndex":3
+            },
+            {   //4
+            	"width":400,
+            	"top":70,
+            	"left":750,
+            	"opacity":0.2,
+            	"zIndex":2
+            },    
+        ];
+            var flag=true;//假设所有所有的动画都执行完毕
+            //图片散开
+            var list=my$("slider").getElementsByTagName("li");
+            function assign(){
+            	for(var i=0;i<list.length;i++){
+            	animate4(list[i],json[i],function(){
+            		flag=true;
+            	});
+               }
+            }
+            assign();
+            //右边按钮
+            my$("next").onclick=function (){
+            	if(flag){
+            		flag=false;
+            		json.push(json.shift());
+            	    assign();
+            	}	
+            };
+            //左边按钮
+            my$("prev").onclick=function (){
+            	if(flag){
+            		flag=false;
+            		json.unshift(json.pop());
+            	    assign();
+            	}
+            };
+            //鼠标进入，左右焦点的div显示
+            my$("slider").onmouseover=function(){
+            	animate4(my$("arrow"),{"opacity":1})
+            };
+            //鼠标离开，左右焦点的div隐藏
+            my$("slider").onmouseout=function(){
+            	animate4(my$("arrow"),{"opacity":0})
+            };
+	</script>
+</body>
+</html>

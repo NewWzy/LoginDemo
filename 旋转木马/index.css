@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.wrap{
+	width: 1200px;
+	margin: 10px auto;
+}
+.slider{
+	height: 500px;
+	position: relative;
+}
+.slider li{
+	list-style: none;
+	position: absolute;
+	left: 200px;
+	top: 0;
+}
+.slider li img{
+	width: 100%;
+	display: block;
+}
+.arrow{
+	opacity: 0;
+	width: 100%;
+	height: 64px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 99;
+}
+.prev,.next{
+	width: 76px;
+	height: 64px;
+	background: url(images/left.png) no-repeat;
+	cursor: pointer;
+}
+.next{
+	float: right;
+	background: url(images/right.png) no-repeat;
+}
+.prev{
+	float: left;
+}
